@@ -1,0 +1,37 @@
+<html>
+  <head><title> pw </title>
+  <script language="javascript">
+  function check()
+  {
+    txtId=document.frm1.id.value
+    txtPw=document.frm1.pw.value
+    if( txtId=="white6689" && txtPw==2589 )
+      document.location.href="main.html"
+    else
+      alert("사이트에 접속할 수 없습니다.")
+  }
+  function inputChk()
+  {
+    txtPw=isNaN(document.frm1.pw.value)
+    if(txtPw==true)
+    {
+      document.frm1.pw.value=""
+      alert("숫자만 입력하시오")
+    }
+  }
+  </script>
+  </head>
+  <Body text=white bgcolor=black leftmargin=0 topmargin=0>
+    <center>
+    <table width=350 border=0>
+      <tr><td align=right><br>
+        <form name=frm1>
+          아이디 <input type="ID" size=20 name=id><br>
+        <form name=frm1>
+          비밀번호 <input type="password" size=20 name=pw onkeydown="inputChk()"><br>
+        <br><input type="button" value="로그인" onclick="check()">
+        </td></tr>
+      </table>
+    </center>
+    </body>
+</html>
